@@ -3,3 +3,6 @@
 
 # User database
 *.sqlite3
+
+# PyCharm projet folder
+/.idea/
