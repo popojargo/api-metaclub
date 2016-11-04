@@ -35,13 +35,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'task',
     'rest_framework',
+    'rest_framework_swagger',
+    'task',
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
-    'PAGE_SIZE': 10
+    # 'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    # 'PAGE_SIZE': 10
 }
 
 MIDDLEWARE = [
@@ -71,6 +72,14 @@ TEMPLATES = [
         },
     },
 ]
+
+SWAGGER_SETTINGS = {
+    'LOGIN_URL': 'rest_framework:login',
+    'LOGOUT_URL': 'rest_framework:logout',
+    'USE_SESSION_AUTH': True,
+    'DOC_EXPANSION': 'list',
+    'APIS_SORTER': 'alpha'
+}
 
 WSGI_APPLICATION = 'apimetaclub.wsgi.application'
 
