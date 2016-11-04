@@ -11,7 +11,7 @@ install:
 # Style validation with Django Standards
 before_script:
   - pep8 --count --show-source --max-line-length=119 --exclude=migrations src/apimetaclub/
-
+  - python src/manage.py  migrate
 # Django tests and coverall
 script: 
   - coverage run src/manage.py test
